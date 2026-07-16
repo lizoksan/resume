@@ -1,0 +1,174 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.hero {
+  padding: 5.6rem 0 4.8rem;
+  background-color: $navy;
+  color: $cream;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include mq("desktop") {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.hero__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  min-width: 0;
+
+  @include mq("desktop") {
+    flex: 1 1 auto;
+    max-width: 56rem;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.4rem;
+  border: 0.1rem solid rgba(250, 247, 241, 0.14);
+  border-radius: 1.2rem;
+  background-color: rgba(250, 247, 241, 0.05);
+
+  @include mq("desktop") {
+    flex: 0 0 30rem;
+  }
+}
+
+.skills__title {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.hero__skills .skills__group_title {
+  margin-bottom: 1.2rem;
+  color: $cream;
+}
+
+.skills__row {
+  display: flex;
+  gap: 2rem;
+
+  @include mq("desktop") {
+    display: contents;
+  }
+}
+
+.skills__row .skills__group {
+  flex: 1 1 0%;
+  min-width: 0;
+
+  @include mq("desktop") {
+    flex: initial;
+  }
+}
+
+.skills__tags {
+  color: $cream;
+}
+
+.skills__list {
+  color: rgba(250, 247, 241, 0.72);
+}
+
+.hero__name {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+
+  @include mq("tablet") {
+    font-size: 4.4rem;
+  }
+}
+
+.hero__title {
+  margin-top: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $accent;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero__summary {
+  max-width: 56rem;
+  color: rgba(250, 247, 241, 0.82);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &--primary {
+    background-color: $accent;
+    color: $cream;
+
+    &:hover {
+      background-color: color-mix(in srgb, $accent 85%, white);
+    }
+  }
+
+  &--ghost {
+    border-color: rgba(250, 247, 241, 0.35);
+    color: $cream;
+
+    &:hover {
+      border-color: $cream;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2rem;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  color: rgba(250, 247, 241, 0.82);
+}
+
+.contacts__icon {
+  flex-shrink: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  color: $accent;
+}
+
+.contacts__item a:hover {
+  color: $cream;
+}

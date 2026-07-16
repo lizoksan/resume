@@ -1,0 +1,40 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+
+  @include mq("tablet") {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.timeline__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.timeline__period {
+  color: $text-muted;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.timeline__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.timeline__place {
+  margin-bottom: 0.6rem;
+  color: $text-muted;
+  font-size: 1.4rem;
+}
+
+.timeline__note {
+  color: $text;
+}

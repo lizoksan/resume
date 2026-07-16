@@ -1,0 +1,21 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.skills__group-title {
+	margin-bottom: 1.2rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.skills__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+}
+
+.skills__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	color: $text-muted;
+}

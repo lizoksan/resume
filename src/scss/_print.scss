@@ -1,0 +1,79 @@
+@media print {
+	@page {
+		size: A4;
+		margin: 1cm;
+	}
+
+	html {
+		font-size: 6.6px;
+	}
+
+	* {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	.hero__actions,
+	.footer {
+		display: none;
+	}
+
+	.hero {
+		padding: 1.8rem 0;
+	}
+
+	.hero__inner {
+		gap: 1.8rem;
+	}
+
+	.hero__main {
+		gap: 1.3rem;
+	}
+
+	.hero__name {
+		font-size: 2.8rem;
+	}
+
+	.hero__summary {
+		max-width: none;
+	}
+
+	.skills {
+		padding: 1.5rem;
+		gap: 1rem;
+	}
+
+	.skills__tags {
+		gap: 0.7rem;
+	}
+
+	.tag {
+		padding: 0.35rem 0.9rem;
+	}
+
+	.section {
+		padding: 2.4rem 0;
+	}
+
+	#education {
+		padding: 1.4rem 0;
+	}
+
+	.timeline {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
+
+	.projects__list {
+		gap: 1.6rem;
+	}
+
+	.project {
+		padding: 1.6rem 2rem;
+	}
+
+	.project,
+	.timeline__item {
+		break-inside: avoid;
+	}
+}

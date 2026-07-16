@@ -1,0 +1,76 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.project {
+  padding: 2.4rem;
+  border: 0.1rem solid $border;
+  border-radius: 1.2rem;
+  background-color: $paper;
+}
+
+.project__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.project__title {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.project__links {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.project__links a {
+  color: $accent;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.project__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.6rem;
+  color: $text-muted;
+  font-size: 1.3rem;
+}
+
+.project__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.project__points li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: $text;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.9rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: $accent;
+  }
+}
