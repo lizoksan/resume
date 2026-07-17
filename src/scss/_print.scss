@@ -19,7 +19,7 @@
 	}
 
 	.hero {
-		padding: 1.8rem 0;
+		padding: 2.6rem 0 1.8rem;
 	}
 
 	.hero__inner {
@@ -47,6 +47,12 @@
 		gap: 0.7rem;
 	}
 
+	.skills__list--columns {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1.6rem;
+	}
+
 	.tag {
 		padding: 0.35rem 0.9rem;
 	}
@@ -55,12 +61,16 @@
 		padding: 2.4rem 0;
 	}
 
+	.section__title {
+		margin-bottom: 2.4rem;
+	}
+
 	#education {
 		padding: 1.4rem 0;
 	}
 
 	.timeline {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: 1.3fr 0.7fr 1.3fr;
 		gap: 1rem;
 	}
 

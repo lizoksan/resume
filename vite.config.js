@@ -10,6 +10,10 @@ export default defineConfig({
 		outDir: '../dist',
 		emptyOutDir: true,
 		rollupOptions: {
+			input: {
+				main: path.resolve('src/index.html'),
+				uk: path.resolve('src/index-uk.html'),
+			},
 			output: {
 				assetFileNames: 'assets/[name][extname]',
 				chunkFileNames: 'js/[name].js',

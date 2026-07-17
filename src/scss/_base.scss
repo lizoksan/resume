@@ -55,6 +55,10 @@ ul {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: $accent;
+
+  @include mq("desktop") {
+    margin-bottom: 2.4rem;
+  }
 }
 
 .tag {
