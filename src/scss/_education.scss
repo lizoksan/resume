@@ -7,8 +7,8 @@
   gap: 1.6rem;
 
   @include mq("tablet") {
-    grid-template-columns: 1.3fr 0.6fr 1.3fr;
-    gap: 2rem;
+    grid-template-columns: 0.8fr 0.8fr 1.3fr;
+    gap: 9rem;
   }
 }
 
